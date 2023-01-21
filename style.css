@@ -1,0 +1,174 @@
+*{
+    margin: auto;
+    padding: auto;
+    box-sizing: border-box;
+}
+
+body{
+    background-image: url(SL-060521-43530-07.jpg);
+    user-select: none;
+}
+
+.logIn{
+    background-color:#A12069 ;
+    padding: 8px;
+    width: 430px;
+    height: 500px;
+    font-family: sans-serif;
+    margin-top: 150px;
+    border-radius: 15px;
+}
+
+input{
+      border-radius: 15px;
+      border: none;
+      font-family: sans-serif;
+      font-size: 15px;
+      }
+.user{
+    padding: 18px;
+    margin-top: 40px;
+    width: 250px;
+    margin-left: 80px;
+} 
+.pass{
+
+    padding: 18px;
+    margin-top: 20px;
+    width: 250px;
+    margin-left: 80px; 
+}
+.log{
+    margin-left: 165px;
+    padding: 6px;
+    width: 80px;
+    border-radius: 15px;
+    border: none;
+    margin-top: 30px;
+}
+
+.log:hover{
+    background-color: pink;
+    color: white;
+}
+
+.sign{
+    margin-left: 165px;
+    padding: 6px;
+    width: 80px;
+    border-radius: 15px;
+    border: none;
+    margin-top: 15px;
+}
+.sign a{
+  text-decoration: none;
+}
+.sign:hover{
+    background-color: pink;
+    color: white
+}
+
+.fa {
+    padding: 10px;
+    font-size: 30px;
+    width: 50px;
+    text-align: center;
+    text-decoration: none;
+  }
+  .fa-facebook {
+    color:white;
+    margin-top: 30px;
+    margin-left: 120px;
+  }
+  .fa-facebook:hover{
+    background-color: #3B5998;
+  }
+
+  .fa-twitter {
+    color: white;
+  }
+  .fa-twitter:hover{
+    background-color: #55ACEE;
+  }
+
+  .fa-google {
+
+    color: white;
+  }
+
+  .fa-google:hover{
+    background-color: red;
+  }
+
+  @media screen and (max-width:600px) {
+    .logIn{
+      background-color:#A12069 ;
+      padding: 8px;
+      width: 230px;
+      height: 350px;
+      font-family: sans-serif;
+      margin-top: 150px;
+      border-radius: 15px;
+  
+  }
+
+  input{
+    border-radius: 15px;
+    border: none;
+    font-family: sans-serif;
+    font-size: 12px;
+    }
+
+  .user{
+    padding: 10px;
+    margin-top: 20px;
+    width: 173px;
+    margin-left: 20px;
+} 
+
+.pass{
+
+  padding: 10px;
+  margin-top: 20px;
+  width: 173px;
+  margin-left: 20px; 
+}
+
+.log{
+  margin-left: 70px;
+  padding: 4px;
+  width: 70px;
+  border-radius: 15px;
+  border: none;
+  margin-top: 20px;
+}
+
+.log:hover{
+  background-color: pink;
+  color: white;
+}
+
+.sign{
+  margin-left: 70px;
+  padding: 4px;
+  width: 70px;
+  border-radius: 15px;
+  border: none;
+  margin-top: 15px;
+}
+
+.fa {
+  padding: 7px;
+  font-size: 20px;
+  width: 35px;
+
+}
+
+.fa-facebook {
+  color:white;
+  margin-top: 20px;
+  margin-left: 50px;
+}
+
+
+  }

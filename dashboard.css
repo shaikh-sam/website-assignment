@@ -1,0 +1,25 @@
+*{
+    margin: auto;
+    padding: auto;
+    box-sizing: border-box;
+    
+}
+
+body{
+    background-image: url(SL-060521-43530-07.jpg);
+}
+ table{
+    margin-top: 150px;
+    font-size: 20px; 
+    background-image: url(9-93483_black-wallpaper-hd.jpg);
+     color: white;
+}
+td{
+    padding: 5px;
+width: 120px;
+}
+
+.edit{
+    text-decoration: none;
+    color: red;
+}

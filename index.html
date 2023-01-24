@@ -1,27 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script src="login.js" type="module"></script>
-</head>
-<body>
-    <div class="main">
-         <div class="logIn">
-               <input type="text" placeholder="Enter your username" class="user" id="user">
-               <input type="password" placeholder="Enter your password" class="pass" id="passs">
-               <button class="log" onclick="logIn()">Log in</button>
-               <button class="sign"><a href="signup.html"> Sign up </a></button>
-               <div class="icons">
-               <a href="#" class="fa fa-facebook"></a>
-               <a href="#" class="fa fa-twitter"></a>
-               <a href="#" class="fa fa-google"></a>
-            </div>
-         </div>
-    </div>
-</body>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <script src="login.js"></script>
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        font-family: "Roboto";
+        font-size: 22px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      <div class="form">
+          <h2>Login</h2>
+          <div class="inputBox">
+              <input type="text" required="" id="user">
+              <span id="msg">
+               <span id="plcholder"> Username</span> </span>
+              <i></i>
+          </div>
+          <div class="inputBox">
+              <input type="password" required="" id="pass">
+              <span id="msg1">
+               <span id="plcholder1"> Password</span> </span>
+              <i></i>
+          </div>
+          <div class="links">
+              <a href="signup.html">SignUp</a>
+          </div>
+          
+          <button class="btn3" onclick="logIn()">Login</button>
+        </div>
+  </div>
+  </body>
 </html>

@@ -1,28 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script src="signup.js"></script>
-    <!-- <script src="login.js" type="module"></script> -->
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="signup.css">
+  <script src="signup.js"></script>
 </head>
 <body>
-    <div class="main">
-         <div class="logIn">
-               <input type="text" placeholder="Enter your username" class="user" id="username">
-               <input type="password" placeholder="Enter your password" class="pass" id="password">
-               <input type="number" placeholder="Enter your mobile number" class="pass" id="mobile">
-               <button class="sign" onclick="signUp()">Sign up</button>
-               <div class="icons">
-               <a href="#" class="fa fa-facebook"></a>
-               <a href="#" class="fa fa-twitter"></a>
-               <a href="#" class="fa fa-google"></a>
-            </div>
-         </div>
+  <div class="box">
+    <div class="form">
+        <h2>SignUp</h2>
+
+        <div class="inputBox" >
+            <input type="text" required="" id="username">
+            <span id="msg">
+              <span id="plcholder1"> Username</span> </span>
+            <i></i>
+        </div>
+        <div class="inputBox">
+            <input type="password" required="" id="password">
+            <span id="msg1">
+              <span id="plcholder"> Password</span> </span>
+            <i></i>
+        </div>
+        <div class="inputBox">
+          <input type="number" required="" id="mobile">
+          <span id="msg2">
+            <span id="plcholder2"> Number</span> </span>
+          <i></i>
+      </div>
+       <button class="btn3" onclick="signUp()">signup</button>
     </div>
+</div>
+  
 </body>
 </html>

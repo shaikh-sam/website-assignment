@@ -7,29 +7,42 @@
     <title>Document</title>
     <link rel="stylesheet" href="dashboard.css">
     <script src="dashboard.js"></script>
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        font-family: "Roboto";
+        font-size: 22px;
+      }
+    </style>
+
+    
     
 </head>
 <body>
   
-      
-    
-<form>
-	<input type="text" id="name">
-    <input type="text" id="age">
-    <input type="text" id="hobby">
-	<input type="button" value="Add" onclick='addData()'>
-</form>
+    <button id="myButton">Add</button>
+<div id="myPopup" class="popup">
+    <button onclick="closePopup()" class="close-btn">&times;</button>
+    <input type="text" id="name" placeholder="Enter your name">
+    <input type="text" id="age"  placeholder="Enter your age">   
+<input type="text" id="hobby"  placeholder="Enter your hobby">	
+<input type="button" value="Add" onclick='addData()' class="btn3">
+  
+</div>
 
 
 <div id="msg"></div>
 
-<h2>List</h2>
+
 <table border="1px" id="tbl" >
 	<thead class="th">
 		<tr>
-			<td>S.No</td>
-			<td>Name</td>
-            <td>Age</td>
+			<td id="sno">S.No</td>
+			<td id="nametb">Name</td>
+            <td id="agetb">Age</td>
             <td>Hobby</td>
 			<td>Action</td>
 		</tr>
@@ -38,6 +51,27 @@
 	
 	<tbody>
 </table>
+
+
+
+
+
+
+<script>
+    document.getElementById("myButton").addEventListener("click", function(){
+  document.getElementById("myPopup").style.display = "block";
+});
+
+function closePopup() {
+  document.getElementById("myPopup").style.display = "none";
+}
+
+
+selectData(); 
+
+
+</script>
+
 
 </body>
 </html>

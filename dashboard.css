@@ -6,20 +6,266 @@
 }
 
 body{
-    background-image: url(SL-060521-43530-07.jpg);
+  min-height: 100vh;
+  background-image: linear-gradient(to right top, #ffffff, #f1e7fe, #edccf6, #f0aee7, #f68ecf);
 }
  table{
-    margin-top: 150px;
+    margin-top: 10px;
     font-size: 20px; 
-    background-image: url(9-93483_black-wallpaper-hd.jpg);
-     color: white;
+   background-color: #EFE9ED;
+     color: #862A67;
+    
 }
 td{
     padding: 5px;
 width: 120px;
 }
+#sno{
+width: 50px;
+}
+#nametb{
+  width: 320px;
+}
 
+#agetb{
+  width: 65px;
+}
 .edit{
     text-decoration: none;
-    color: red;
 }
+
+.del{
+    margin-left: 5px;
+}
+
+#myButton{
+  width: 100px;
+   margin-left: 65.9%;
+  background-color: #EFE9ED;
+  color: #862A67;
+  padding: 7px;
+  border-radius: 5px;
+  margin-top: 85px;
+  font-size: 15px;
+  border: none;
+
+}
+
+#myButton:hover{
+    background-color: #862A67;
+    color: #EFE9ED;
+    transition: 0.2s ease-in-out;
+}
+
+.popup {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 60%;
+    height: 55%;
+    overflow: auto;
+    background-color: #EFE9ED;
+    margin-left: 20%;
+    margin-top: 3%;
+    overflow: hidden;
+    box-shadow: 5px 5px #862A67;
+    }
+  /* .popup::before {
+    content: '';
+    z-index: 1;
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 380px;
+    height: 420px;
+    transform-origin:bottom right;
+    background:linear-gradient(0deg, transparent, #45f3ff, #45f3ff);
+    animation: animate 6s linear infinite;
+}
+
+.popup::after {
+    content: '';
+    z-index: 1;
+    position: absolute;
+    top: -50%;
+    left: -20%;
+    width: 380px;
+    height: 420px;
+    transform-origin:bottom right;
+    background:linear-gradient(0deg, transparent, #45f3ff, #45f3ff);
+    animation: animate 6s linear infinite;
+    animation-delay: -3s;
+}
+
+@keyframes animate {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+} */
+
+
+  input{
+    background-color: #862A67;
+    padding: 10px;
+    width: 50%;
+    height: 50px;
+    margin: 5px;
+    margin-left: 230px;
+    margin-top: 20px;
+    color: #EFE9ED;
+    font-size: 15px;
+    border-radius: 10px;
+    border: none;
+  }
+  ::placeholder { 
+    color: #EFE9ED;
+    opacity: 1; 
+  }
+  .btn3{
+    width: 150px;
+    margin-left: 41%;
+  }
+  
+  .btn3:hover{
+    background-color: black;
+    color: #EFE9ED;
+  }
+
+  .close-btn{
+    margin-left: 95%;
+    background-color: #862A67;
+    color: #EFE9ED;
+    border: none;
+  
+
+  }
+  .close-btn:hover{
+    background-color: black;
+    color: #EFE9ED;
+  }
+
+  @media screen and (max-width: 600px){
+    body{
+      min-height: 100vh;
+      background-image: linear-gradient(to right top, #ffffff, #f1e7fe, #edccf6, #f0aee7, #f68ecf);
+    }
+     table{
+        margin-top: 10px;
+        font-size: 11px; 
+       background-color: #EFE9ED;
+         color: #862A67;
+         font-weight: 500;
+       
+    }
+     #tbl{
+      width: 85%;
+     }
+    td{
+      padding: 5px;
+  width: 120px;
+  }
+  #sno{
+  width: 10px;
+  }
+  #nametb{
+    width: 45%;
+  }
+  
+  #agetb{
+    width: 65px;
+  }
+  .edit{
+      text-decoration: none;
+      margin-left: 10px;
+  }
+  
+  .del{
+      margin-left: 5px;
+      margin-top: 10px;
+  }
+
+  #myButton{
+    width: 60px;
+     margin-left: 75%;
+    background-color: #EFE9ED;
+    color: #862A67;
+    padding: 7px;
+    border-radius: 5px;
+    margin-top: 85px;
+    font-size: 12px;
+    border: none;
+  
+  }
+  
+  #myButton:hover{
+      background-color: #862A67;
+      color: #EFE9ED;
+      transition: 0.2s ease-in-out;
+  }
+
+  .popup {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 85%;
+    height: 55%;
+    overflow: auto;
+    background-color: #EFE9ED;
+    margin-left: 7%;
+    margin-top: 3%;
+    overflow: hidden;
+    box-shadow: 5px 5px #862A67;
+    }
+
+    input{
+      background-color: #862A67;
+      padding: 10px;
+      width: 80%;
+      height: 50px;
+      margin: 5px;
+      margin-left: 30px;
+      margin-top: 30px;
+      color: #EFE9ED;
+      font-size: 15px;
+      border-radius: 10px;
+      border: none;
+    }
+
+    ::placeholder { 
+      color: #EFE9ED;
+      opacity: 1; 
+    }
+    .btn3{
+      width: 90px;
+      margin-left: 35%;
+      height: 40px;
+    }
+    
+    .btn3:hover{
+      background-color: black;
+      color: #EFE9ED;
+    }
+  
+    .close-btn{
+      margin-left: 90%;
+      background-color: #862A67;
+      color: #EFE9ED;
+      border: none;
+    
+  
+    }
+    .close-btn:hover{
+      background-color: black;
+      color: #EFE9ED;
+    }
+  
+  
+  }

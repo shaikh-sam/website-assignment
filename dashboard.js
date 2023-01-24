@@ -3,9 +3,8 @@
 
 
 
-
 let id="no";
-localStorage.clear();
+// localStorage.clear();
 selectData();
 
 function validateData(name, age, hobby){
@@ -37,63 +36,71 @@ function addData(){
 	if(validateData(name, age, hobby)){
 		console.log(id);
 		if(id=='no'){
-			let arr=getCrudData();
+			let arr=JSON.parse(localStorage.getItem('table'));
 			if(arr==null){
-				let data=[{name : name, age : age, hobby : hobby}];
-				setCrudData(data);
+				arr=[]
+				let data={name : name, age : age, hobby : hobby};
+				arr.push(data)
+				localStorage.setItem('table',JSON.stringify(arr));
+
 			}else{
 				arr.push({name : name, age : age, hobby : hobby});
-				setCrudData(arr);
+				localStorage.setItem('table',JSON.stringify(arr));
 			}
-			document.getElementById('msg').innerHTML='Data added';
 		}else{
-			let arr=getCrudData();
+			let arr=JSON.parse(localStorage.getItem('table'));;
 			arr[id]={name : name, age : age, hobby : hobby};
-			setCrudData(arr);
-			document.getElementById('msg').innerHTML='Data updated';
+			localStorage.setItem('table',JSON.stringify(arr));
+
 		}
 		document.getElementById('name').value='';
 		document.getElementById('age').value='';
 		document.getElementById('hobby').value='';
-		selectData();        
+		selectData(); 
+		document.getElementById("myPopup").style.display = "none";
+       
 	}else{
-        document.getElementById('msg').innerHTML='Please enter your name';
+        document.getElementById('msg');
 	}
 }
 
 function selectData(){
-	let arr=getCrudData();
+	let arr=JSON.parse(localStorage.getItem('table'));
 	if(arr!=null){
 		let html='';
 		for(let k in arr){
-			html=html+`<tr><td>${Number(k)+1}</td><td>${arr[k]?.name}</td><td>${arr[k]?.age}</td><td>${arr[k]?.hobby}</td><td><a href="javascript:void(0)" onclick="editData(${k})" class="edit" > Edit</a>&nbsp;<a href="javascript:void(0)" onclick="deleteData(${k})">Delete</a></td></tr>`;
+			html=html+`<tr><td>${Number(k)+1}</td><td>${arr[k]?.name}</td><td>${arr[k]?.age}</td><td>${arr[k]?.hobby}</td><td><a href="javascript:void(0)" onclick="editData(${k})" class="edit" id="edit${k}" ><img src="icons8-pencil-30.png" alt=""> </a>&nbsp;<a href="javascript:void(0)" onclick="deleteData(${k})" class="del"><img src="icons8-trash-30.png" alt=""></a></td></tr>`;
 		}
 		document.getElementById('root').innerHTML=html;
 		
 	}
 }
 
-function editData(rid){
-	id=rid;
-	let arr=getCrudData();
-	document.getElementById('name').value=arr[rid]?.name;
-	document.getElementById('age').value=arr[rid]?.age;
-	document.getElementById('hobby').value=arr[rid]?.hobby;
+function editData(index){
+	id=index;
+	let arr=JSON.parse(localStorage.getItem('table'));
+	document.getElementById('name').value=arr[index]?.name;
+	document.getElementById('age').value=arr[index]?.age;
+	document.getElementById('hobby').value=arr[index]?.hobby;
+	document.getElementById(`edit${index}`).addEventListener("click", function(){
+		document.getElementById("myPopup").style.display = "block";
+	  });
 }
 
-function deleteData(rid){
-	let arr=getCrudData();
-	arr.splice(rid,1);
-	setCrudData(arr);
+function deleteData(index){
+	let arr=JSON.parse(localStorage.getItem('table'));
+	arr.splice(index,1);
+	setTableData(arr);
 	selectData();
 }
 
-function getCrudData(){
-	let arr=JSON.parse(localStorage.getItem('crud'));
+function getTableData(){
+	let arr=JSON.parse(localStorage.getItem('table'));
 	return arr;
 }
 
-function setCrudData(arr){
-	localStorage.setItem('crud',JSON.stringify(arr));
+function setTableData(arr){
+	localStorage.setItem('table',JSON.stringify(arr));
 }
+
 

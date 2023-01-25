@@ -104,3 +104,6 @@ function setTableData(arr){
 }
 
 
+function logout(){
+	window.location.assign("index.html");
+}

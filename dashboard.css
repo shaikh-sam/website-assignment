@@ -150,6 +150,26 @@ width: 50px;
     color: #EFE9ED;
   }
 
+  #myButton2{
+    width: 100px;
+     margin-left: 92%;
+    background-color: #EFE9ED;
+    color: #862A67;
+    padding: 7px;
+    border-radius: 5px;
+    margin-top: 25px;
+    font-size: 15px;
+    border: none;
+  
+  }
+  
+  #myButton2:hover{
+      background-color: #862A67;
+      color: #EFE9ED;
+      transition: 0.2s ease-in-out;
+  }
+  
+
   @media screen and (max-width: 600px){
     body{
       min-height: 100vh;
